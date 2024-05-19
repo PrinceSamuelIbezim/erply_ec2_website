@@ -22,7 +22,7 @@ jobs:
       - name: Build Docker image
         run: |
           cd Landing-Page-React
-          docker build -t olumayor99/doyenify-devops .
+          docker build -t princesamuelibezim/erply_task .
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -32,7 +32,7 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push olumayor99/doyenify-devops
+          docker push princesamuelibezim/erply_task
 
   Deploy_Website:
     needs: [Build_and_Push_Docker_Image_to_DockerHub]
